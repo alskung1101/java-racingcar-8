@@ -13,18 +13,12 @@ public class GameController {
     private int tryCount;
 
     public void run() {
-        try {
-            initializeGame();
-            startGame();
-            endGame();
-        } catch (IllegalArgumentException e) {
-            System.out.println("ERROR " + e.getMessage());
-
-        }
+        initializeGame();
+        startGame();
+        endGame();
     }
 
     private void initializeGame() {
-
         this.cars = createCars();
         this.tryCount = inputView.inputTryCount();
     }
