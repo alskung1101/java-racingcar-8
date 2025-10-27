@@ -43,7 +43,6 @@ class CarsTest {
     @Test
     @DisplayName("라운드 실행 시 고정된 난수(Mocking)에 따라 자동차가 이동한다")
     void 라운드_실행_시_자동차들이_규칙에_따라_이동한다() {
-        // pobi: 4 (Go), woni: 3 (Stop), jun: 5 (Go)
         RandomGenerator fixedRandom = new FixedNumberGenerator(4, 3, 5);
         List<String> names = Arrays.asList("pobi", "woni", "jun");
         Cars cars = new Cars(names, fixedRandom);

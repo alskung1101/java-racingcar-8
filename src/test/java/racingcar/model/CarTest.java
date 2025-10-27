@@ -17,7 +17,6 @@ class CarTest {
         assertThat(car.getPosition()).isEqualTo(0);
     }
 
-    // 전진 조건 4 이상일 때 위치가 1 증가하는지 확인
     @ParameterizedTest
     @ValueSource(ints = {4, 5, 9})
     @DisplayName("전진 조건(4 이상)일 때 위치가 1 증가한다.")
@@ -27,7 +26,6 @@ class CarTest {
         assertThat(car.getPosition()).isEqualTo(1);
     }
 
-    // 정지 조건 3 이하일 때 위치가 변하지 않는지 확인
     @ParameterizedTest
     @ValueSource(ints = {0, 1, 3})
     @DisplayName("정지 조건(3 이하)일 때 위치가 변하지 않는다.")
